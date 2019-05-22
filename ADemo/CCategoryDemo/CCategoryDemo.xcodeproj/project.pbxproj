@@ -128,6 +128,9 @@
 		E5674C4E228EB62800D63F4D /* UIScreen+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+frame.m"; sourceTree = "<group>"; };
 		E5674C4F228EB62800D63F4D /* UIApplication+url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+url.h"; sourceTree = "<group>"; };
 		E5674C50228EB62800D63F4D /* UIApplication+url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+url.m"; sourceTree = "<group>"; };
+		E5D803EC22955AA0009604A3 /* CCFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCFoundation.h; sourceTree = "<group>"; };
+		E5D803ED22955AF4009604A3 /* CCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKit.h; sourceTree = "<group>"; };
+		E5D803EE22955B5D009604A3 /* CCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCategory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,11 +180,12 @@
 		E5674BC2228EA8E000D63F4D /* ACode */ = {
 			isa = PBXGroup;
 			children = (
+				E5D803EE22955B5D009604A3 /* CCategory.h */,
 				E5674BC5228EA92A00D63F4D /* WebKit */,
 				E5674C43228EB5C400D63F4D /* Api */,
-				E5674BEA228EB2A800D63F4D /* Third */,
 				E5674BC4228EA92000D63F4D /* UIKit */,
 				E5674BC3228EA90F00D63F4D /* Foundation */,
+				E5674BEA228EB2A800D63F4D /* Third */,
 			);
 			name = ACode;
 			path = ../../../ACode;
@@ -190,6 +194,7 @@
 		E5674BC3228EA90F00D63F4D /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				E5D803EC22955AA0009604A3 /* CCFoundation.h */,
 				E5674BD4228EA9D800D63F4D /* NSDate+fmt.h */,
 				E5674BCF228EA9D800D63F4D /* NSDate+fmt.m */,
 				E5674BD5228EA9D800D63F4D /* NSDictionary+string.h */,
@@ -213,6 +218,7 @@
 		E5674BC4228EA92000D63F4D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E5D803ED22955AF4009604A3 /* CCKit.h */,
 				E5674C4F228EB62800D63F4D /* UIApplication+url.h */,
 				E5674C50228EB62800D63F4D /* UIApplication+url.m */,
 				E5674C4A228EB62800D63F4D /* UIScreen+frame.h */,
