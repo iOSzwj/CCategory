@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author             = { "hare27" => "hare27@foxmail.com" }
   spec.platform     = :ios, "9.0"
-  spec.source       = { :git => "git@github.com:iOSzwj/CCategory.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/iOSzwj/CCategory.git", :tag => "#{spec.version}" }
   spec.source_files  = "Code", "ACode/*.h"
   spec.requires_arc = true
   spec.frameworks = 'UIKit', 'Foundation'
