@@ -1,6 +1,6 @@
-// AFNetworking.h
+// CCNetworking.h
 //
-// Copyright (c) 2013 AFNetworking (http://afnetworking.com/)
+// Copyright (c) 2013 CCNetworking (http://CCNetworking.com/)
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -24,8 +24,8 @@
 #import <Availability.h>
 #import <TargetConditionals.h>
 
-#ifndef _AFNETWORKING_
-    #define _AFNETWORKING_
+#ifndef _CCNetworkING_
+    #define _CCNetworkING_
 
     #import "CCURLRequestSerialization.h"
     #import "CCURLResponseSerialization.h"
@@ -38,4 +38,4 @@
     #import "CCURLSessionManager.h"
     #import "CCHTTPSessionManager.h"
 
-#endif /* _AFNETWORKING_ */
+#endif /* _CCNetworkING_ */

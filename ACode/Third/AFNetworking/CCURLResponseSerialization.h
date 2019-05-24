@@ -101,9 +101,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- `AFJSONResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes JSON responses.
+ `CCJSONResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes JSON responses.
 
- By default, `AFJSONResponseSerializer` accepts the following MIME types, which includes the official standard, `application/json`, as well as other commonly-used types:
+ By default, `CCJSONResponseSerializer` accepts the following MIME types, which includes the official standard, `application/json`, as well as other commonly-used types:
 
  - `application/json`
  - `text/json`
@@ -111,7 +111,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  In RFC 7159 - Section 8.1, it states that JSON text is required to be encoded in UTF-8, UTF-16, or UTF-32, and the default encoding is UTF-8. NSJSONSerialization provides support for all the encodings listed in the specification, and recommends UTF-8 for efficiency. Using an unsupported encoding will result in serialization error. See the `NSJSONSerialization` documentation for more details.
  */
-@interface AFJSONResponseSerializer : CCHTTPResponseSerializer
+@interface CCJSONResponseSerializer : CCHTTPResponseSerializer
 
 - (instancetype)init;
 
@@ -137,14 +137,14 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -
 
 /**
- `AFXMLParserResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes XML responses as an `NSXMLParser` objects.
+ `CCXMLParserResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes XML responses as an `NSXMLParser` objects.
 
- By default, `AFXMLParserResponseSerializer` accepts the following MIME types, which includes the official standard, `application/xml`, as well as other commonly-used types:
+ By default, `CCXMLParserResponseSerializer` accepts the following MIME types, which includes the official standard, `application/xml`, as well as other commonly-used types:
 
  - `application/xml`
  - `text/xml`
  */
-@interface AFXMLParserResponseSerializer : CCHTTPResponseSerializer
+@interface CCXMLParserResponseSerializer : CCHTTPResponseSerializer
 
 @end
 
@@ -153,14 +153,14 @@ NS_ASSUME_NONNULL_BEGIN
 #ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
 
 /**
- `AFXMLDocumentResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes XML responses as an `NSXMLDocument` objects.
+ `CCXMLDocumentResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes XML responses as an `NSXMLDocument` objects.
 
- By default, `AFXMLDocumentResponseSerializer` accepts the following MIME types, which includes the official standard, `application/xml`, as well as other commonly-used types:
+ By default, `CCXMLDocumentResponseSerializer` accepts the following MIME types, which includes the official standard, `application/xml`, as well as other commonly-used types:
 
  - `application/xml`
  - `text/xml`
  */
-@interface AFXMLDocumentResponseSerializer : CCHTTPResponseSerializer
+@interface CCXMLDocumentResponseSerializer : CCHTTPResponseSerializer
 
 - (instancetype)init;
 
@@ -183,13 +183,13 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -
 
 /**
- `AFPropertyListResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes XML responses as an `NSXMLDocument` objects.
+ `CCPropertyListResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes XML responses as an `NSXMLDocument` objects.
 
- By default, `AFPropertyListResponseSerializer` accepts the following MIME types:
+ By default, `CCPropertyListResponseSerializer` accepts the following MIME types:
 
  - `application/x-plist`
  */
-@interface AFPropertyListResponseSerializer : CCHTTPResponseSerializer
+@interface CCPropertyListResponseSerializer : CCHTTPResponseSerializer
 
 - (instancetype)init;
 
@@ -217,9 +217,9 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -
 
 /**
- `AFImageResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes image responses.
+ `CCImageResponseSerializer` is a subclass of `CCHTTPResponseSerializer` that validates and decodes image responses.
 
- By default, `AFImageResponseSerializer` accepts the following MIME types, which correspond to the image formats supported by UIImage or NSImage:
+ By default, `CCImageResponseSerializer` accepts the following MIME types, which correspond to the image formats supported by UIImage or NSImage:
 
  - `image/tiff`
  - `image/jpeg`
@@ -232,7 +232,7 @@ NS_ASSUME_NONNULL_BEGIN
  - `image/x-xbitmap`
  - `image/x-win-bitmap`
  */
-@interface AFImageResponseSerializer : CCHTTPResponseSerializer
+@interface CCImageResponseSerializer : CCHTTPResponseSerializer
 
 #if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 /**
@@ -251,9 +251,9 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -
 
 /**
- `AFCompoundSerializer` is a subclass of `CCHTTPResponseSerializer` that delegates the response serialization to the first `CCHTTPResponseSerializer` object that returns an object for `responseObjectForResponse:data:error:`, falling back on the default behavior of `CCHTTPResponseSerializer`. This is useful for supporting multiple potential types and structures of server responses with a single serializer.
+ `CCCompoundSerializer` is a subclass of `CCHTTPResponseSerializer` that delegates the response serialization to the first `CCHTTPResponseSerializer` object that returns an object for `responseObjectForResponse:data:error:`, falling back on the default behavior of `CCHTTPResponseSerializer`. This is useful for supporting multiple potential types and structures of server responses with a single serializer.
  */
-@interface AFCompoundResponseSerializer : CCHTTPResponseSerializer
+@interface CCCompoundResponseSerializer : CCHTTPResponseSerializer
 
 /**
  The component response serializers.
@@ -292,19 +292,19 @@ FOUNDATION_EXPORT NSString * const CCURLResponseSerializationErrorDomain;
 
  These keys may exist in the user info dictionary, in addition to those defined for NSError.
 
- - `NSString * const AFNetworkingOperationFailingURLResponseErrorKey`
- - `NSString * const AFNetworkingOperationFailingURLResponseDataErrorKey`
+ - `NSString * const CCNetworkingOperationFailingURLResponseErrorKey`
+ - `NSString * const CCNetworkingOperationFailingURLResponseDataErrorKey`
 
  ### Constants
 
- `AFNetworkingOperationFailingURLResponseErrorKey`
+ `CCNetworkingOperationFailingURLResponseErrorKey`
  The corresponding value is an `NSURLResponse` containing the response of the operation associated with an error. This key is only present in the `CCURLResponseSerializationErrorDomain`.
 
- `AFNetworkingOperationFailingURLResponseDataErrorKey`
+ `CCNetworkingOperationFailingURLResponseDataErrorKey`
  The corresponding value is an `NSData` containing the original data of the operation associated with an error. This key is only present in the `CCURLResponseSerializationErrorDomain`.
  */
-FOUNDATION_EXPORT NSString * const AFNetworkingOperationFailingURLResponseErrorKey;
+FOUNDATION_EXPORT NSString * const CCNetworkingOperationFailingURLResponseErrorKey;
 
-FOUNDATION_EXPORT NSString * const AFNetworkingOperationFailingURLResponseDataErrorKey;
+FOUNDATION_EXPORT NSString * const CCNetworkingOperationFailingURLResponseDataErrorKey;
 
 NS_ASSUME_NONNULL_END

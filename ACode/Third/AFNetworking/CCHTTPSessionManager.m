@@ -79,7 +79,7 @@
     self.baseURL = url;
 
     self.requestSerializer = [CCHTTPRequestSerializer serializer];
-    self.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.responseSerializer = [CCJSONResponseSerializer serializer];
 
     return self;
 }
@@ -101,12 +101,12 @@
 @dynamic securityPolicy;
 
 - (void)setSecurityPolicy:(CCSecurityPolicy *)securityPolicy {
-    if (securityPolicy.SSLPinningMode != AFSSLPinningModeNone && ![self.baseURL.scheme isEqualToString:@"https"]) {
+    if (securityPolicy.SSLPinningMode != CCSSLPinningModeNone && ![self.baseURL.scheme isEqualToString:@"https"]) {
         NSString *pinningMode = @"Unknown Pinning Mode";
         switch (securityPolicy.SSLPinningMode) {
-            case AFSSLPinningModeNone:        pinningMode = @"AFSSLPinningModeNone"; break;
-            case AFSSLPinningModeCertificate: pinningMode = @"AFSSLPinningModeCertificate"; break;
-            case AFSSLPinningModePublicKey:   pinningMode = @"AFSSLPinningModePublicKey"; break;
+            case CCSSLPinningModeNone:        pinningMode = @"CCSSLPinningModeNone"; break;
+            case CCSSLPinningModeCertificate: pinningMode = @"CCSSLPinningModeCertificate"; break;
+            case CCSSLPinningModePublicKey:   pinningMode = @"CCSSLPinningModePublicKey"; break;
         }
         NSString *reason = [NSString stringWithFormat:@"A security policy configured with `%@` can only be applied on a manager with a secure base URL (i.e. https)", pinningMode];
         @throw [NSException exceptionWithName:@"Invalid Security Policy" reason:reason userInfo:nil];
@@ -185,7 +185,7 @@
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
                     parameters:(nullable id)parameters
-     constructingBodyWithBlock:(nullable void (^)(id<AFMultipartFormData> _Nonnull))block
+     constructingBodyWithBlock:(nullable void (^)(id<CCMultipartFormData> _Nonnull))block
                        success:(nullable void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success
                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
@@ -194,7 +194,7 @@
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
                     parameters:(id)parameters
-     constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
+     constructingBodyWithBlock:(void (^)(id <CCMultipartFormData> formData))block
                       progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
                        success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                        failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
