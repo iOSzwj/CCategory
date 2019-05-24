@@ -46,6 +46,10 @@
 		E5674C53228EB62800D63F4D /* UIViewController+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C4D228EB62800D63F4D /* UIViewController+frame.m */; };
 		E5674C54228EB62800D63F4D /* UIScreen+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C4E228EB62800D63F4D /* UIScreen+frame.m */; };
 		E5674C55228EB62800D63F4D /* UIApplication+url.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C50228EB62800D63F4D /* UIApplication+url.m */; };
+		E5C587982297DF73003B45A8 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C587902297DF73003B45A8 /* WebViewJavascriptBridgeBase.m */; };
+		E5C587992297DF73003B45A8 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C587912297DF73003B45A8 /* WKWebViewJavascriptBridge.m */; };
+		E5C5879A2297DF73003B45A8 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C587922297DF73003B45A8 /* WebViewJavascriptBridge.m */; };
+		E5C5879B2297DF73003B45A8 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C587952297DF73003B45A8 /* WebViewJavascriptBridge_JS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +132,14 @@
 		E5674C4E228EB62800D63F4D /* UIScreen+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+frame.m"; sourceTree = "<group>"; };
 		E5674C4F228EB62800D63F4D /* UIApplication+url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+url.h"; sourceTree = "<group>"; };
 		E5674C50228EB62800D63F4D /* UIApplication+url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+url.m"; sourceTree = "<group>"; };
+		E5C587902297DF73003B45A8 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		E5C587912297DF73003B45A8 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		E5C587922297DF73003B45A8 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		E5C587932297DF73003B45A8 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		E5C587942297DF73003B45A8 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		E5C587952297DF73003B45A8 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		E5C587962297DF73003B45A8 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		E5C587972297DF73003B45A8 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		E5D803EC22955AA0009604A3 /* CCFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCFoundation.h; sourceTree = "<group>"; };
 		E5D803ED22955AF4009604A3 /* CCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKit.h; sourceTree = "<group>"; };
 		E5D803EE22955B5D009604A3 /* CCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCategory.h; sourceTree = "<group>"; };
@@ -243,6 +255,7 @@
 		E5674BEA228EB2A800D63F4D /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				E5C5878F2297DF73003B45A8 /* WebViewJavascriptBridge */,
 				E5674BEB228EB2A800D63F4D /* RealReachability */,
 				E5674C2E228EB3F500D63F4D /* AFNetworking */,
 				E5674C08228EB2A800D63F4D /* MBProgressHUD */,
@@ -345,6 +358,21 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		E5C5878F2297DF73003B45A8 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				E5C587902297DF73003B45A8 /* WebViewJavascriptBridgeBase.m */,
+				E5C587912297DF73003B45A8 /* WKWebViewJavascriptBridge.m */,
+				E5C587922297DF73003B45A8 /* WebViewJavascriptBridge.m */,
+				E5C587932297DF73003B45A8 /* WebViewJavascriptBridge_JS.h */,
+				E5C587942297DF73003B45A8 /* WebViewJavascriptBridgeBase.h */,
+				E5C587952297DF73003B45A8 /* WebViewJavascriptBridge_JS.m */,
+				E5C587962297DF73003B45A8 /* WebViewJavascriptBridge.h */,
+				E5C587972297DF73003B45A8 /* WKWebViewJavascriptBridge.h */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,9 +446,11 @@
 				E5674C52228EB62800D63F4D /* UIView+frame.m in Sources */,
 				E5674C0B228EB2A800D63F4D /* PingFoundation.m in Sources */,
 				E5674BE1228EA9D800D63F4D /* NSDate+fmt.m in Sources */,
+				E5C587982297DF73003B45A8 /* WebViewJavascriptBridgeBase.m in Sources */,
 				E5674C16228EB2A800D63F4D /* RealReachability.m in Sources */,
 				E5674B8F228EA8A500D63F4D /* ViewController.m in Sources */,
 				E5674C0C228EB2A800D63F4D /* PingHelper.m in Sources */,
+				E5C587992297DF73003B45A8 /* WKWebViewJavascriptBridge.m in Sources */,
 				E5674C11228EB2A800D63F4D /* ReachStateWWAN.m in Sources */,
 				E5674C46228EB5C400D63F4D /* CCApi.m in Sources */,
 				E5674C0F228EB2A800D63F4D /* ReachStateUnloaded.m in Sources */,
@@ -435,7 +465,9 @@
 				E5674BDE228EA9D800D63F4D /* NSObject+runtime.m in Sources */,
 				E5674C14228EB2A800D63F4D /* FSMStateUtil.m in Sources */,
 				E5674BDD228EA9D800D63F4D /* NSString+sec.m in Sources */,
+				E5C5879A2297DF73003B45A8 /* WebViewJavascriptBridge.m in Sources */,
 				E5674C10228EB2A800D63F4D /* ReachStateUnReachable.m in Sources */,
+				E5C5879B2297DF73003B45A8 /* WebViewJavascriptBridge_JS.m in Sources */,
 				E5674C3F228EB3F500D63F4D /* CCURLSessionManager.m in Sources */,
 				E5674B9A228EA8A500D63F4D /* main.m in Sources */,
 				E5674C54228EB62800D63F4D /* UIScreen+frame.m in Sources */,

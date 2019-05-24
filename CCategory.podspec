@@ -4,7 +4,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "CCategory"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "中国共产党万岁"
   
   spec.description  = <<-DESC
@@ -33,6 +33,9 @@ Pod::Spec.new do |spec|
     end
     third.subspec 'RealReachability' do |rr|
       rr.source_files = 'ACode/Third/RealReachability/**/*.{h,m}'
+    end
+    third.subspec 'WebViewJavascriptBridge' do |wj|
+        wj.source_files = 'ACode/Third/WebViewJavascriptBridge/**/*.{h,m}'
     end
   end
   
