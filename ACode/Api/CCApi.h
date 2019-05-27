@@ -13,6 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 extern NSString *const CCNetworkStateChangeKey;
 
+typedef void(^CCSuccessBlock)(void);
+typedef void(^CCSuccessResultBlock)(id result);
+typedef void(^CCFailueBlock)(NSError * _Nullable error);
+
 typedef enum : NSUInteger {
     /** 未知*/
     CCNetworkStateUnknown = 0,
@@ -62,11 +66,11 @@ typedef enum : NSUInteger {
 +(void)setHeaders:(NSDictionary *)dict;
 -(void)setHeaders:(NSDictionary *)dict;
 
-+(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(void(^)(id result))success failure:(void(^)(NSError *error))failure;
-+(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(void(^)(id result))success failure:(void(^)(NSError *error))failure;
++(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
++(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
 
--(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(void(^)(id result))success failure:(void(^)(NSError *error))failure;
--(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(void(^)(id result))success failure:(void(^)(NSError *error))failure;
+-(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
+-(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
 
 
 

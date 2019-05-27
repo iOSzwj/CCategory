@@ -112,8 +112,6 @@ NSString *const CCNetworkStateChangeKey = @"CCNetworkStateChangeKey";
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
-//
-
 +(void)setHeaders:(NSDictionary *)dict{
     [self.defaultApi setHeaders:dict];
 }
@@ -133,14 +131,14 @@ NSString *const CCNetworkStateChangeKey = @"CCNetworkStateChangeKey";
     }];
 }
 
-+(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(void(^)(id result))success failure:(void(^)(NSError *error))failure{
++(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
     return [[self defaultApi] GET:path parameters:params success:success failure:failure];
 }
-+(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(void(^)(id result))success failure:(void(^)(NSError *error))failure{
++(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
     return [[self defaultApi] POST:path parameters:params success:success failure:failure];
 }
 
--(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(void(^)(id result))success failure:(void(^)(NSError *error))failure{
+-(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
     
     return [self.apiM GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
@@ -153,7 +151,7 @@ NSString *const CCNetworkStateChangeKey = @"CCNetworkStateChangeKey";
     }];
     
 }
--(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(void(^)(id result))success failure:(void(^)(NSError *error))failure{
+-(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
     return [self.apiM POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
