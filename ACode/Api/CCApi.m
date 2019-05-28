@@ -35,7 +35,7 @@ NSString *const CCNetworkStateChangeKey = @"CCNetworkStateChangeKey";
 
 #pragma mark - 公开的方法 public Methods
 
-+(CCHTTPSessionManager *)apiM{
++(AFHTTPSessionManager *)apiM{
     return self.defaultApi.apiM;
 }
 +(NSString *)userAgent{
@@ -233,10 +233,10 @@ NSString *const CCNetworkStateChangeKey = @"CCNetworkStateChangeKey";
 #pragma mark - setter
 
 #pragma mark - 懒加载 getter
--(CCHTTPSessionManager *)apiM{
+-(AFHTTPSessionManager *)apiM{
     if (_apiM == nil) {
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-        _apiM = [[CCHTTPSessionManager alloc] initWithBaseURL:nil sessionConfiguration:config];
+        _apiM = [[AFHTTPSessionManager alloc] initWithBaseURL:nil sessionConfiguration:config];
         _apiM.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/html", @"text/javascript",@"text/plain", nil];
     }
     return _apiM;

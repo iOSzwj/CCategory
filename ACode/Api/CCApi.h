@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -37,13 +37,13 @@ typedef enum : NSUInteger {
 /** 当前网络状态:字符串*/
 @property (nonatomic, copy, readonly) NSString *networkStateString;
 
-@property (nonatomic, strong)CCHTTPSessionManager *apiM;
+@property (nonatomic, strong)AFHTTPSessionManager *apiM;
 @property (nonatomic, strong) NSString *userAgent;
 
 
 +(CCApi *)defaultApi;
 
-+(CCHTTPSessionManager *)apiM;
++(AFHTTPSessionManager *)apiM;
 +(NSString *)userAgent;
 +(CCNetworkState)networkState;
 +(NSString *)networkStateString;

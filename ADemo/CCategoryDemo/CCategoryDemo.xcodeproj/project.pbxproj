@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31E81EDAA95EB01716CDAEFC /* Pods_CCategoryDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED526DDDEC5BE3081348D370 /* Pods_CCategoryDemo.framework */; };
 		E5674B8C228EA8A500D63F4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674B8B228EA8A500D63F4D /* AppDelegate.m */; };
 		E5674B8F228EA8A500D63F4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674B8E228EA8A500D63F4D /* ViewController.m */; };
 		E5674B92228EA8A500D63F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5674B90228EA8A500D63F4D /* Main.storyboard */; };
@@ -35,12 +36,6 @@
 		E5674C15228EB2A800D63F4D /* ReachStateWIFI.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C06228EB2A800D63F4D /* ReachStateWIFI.m */; };
 		E5674C16228EB2A800D63F4D /* RealReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C07228EB2A800D63F4D /* RealReachability.m */; };
 		E5674C17228EB2A800D63F4D /* CCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C0A228EB2A800D63F4D /* CCProgressHUD.m */; };
-		E5674C3D228EB3F500D63F4D /* CCURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C33228EB3F500D63F4D /* CCURLResponseSerialization.m */; };
-		E5674C3E228EB3F500D63F4D /* CCHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C34228EB3F500D63F4D /* CCHTTPSessionManager.m */; };
-		E5674C3F228EB3F500D63F4D /* CCURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C36228EB3F500D63F4D /* CCURLSessionManager.m */; };
-		E5674C40228EB3F500D63F4D /* CCURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C37228EB3F500D63F4D /* CCURLRequestSerialization.m */; };
-		E5674C41228EB3F500D63F4D /* CCNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C39228EB3F500D63F4D /* CCNetworkReachabilityManager.m */; };
-		E5674C42228EB3F500D63F4D /* CCSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C3A228EB3F500D63F4D /* CCSecurityPolicy.m */; };
 		E5674C46228EB5C400D63F4D /* CCApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C45228EB5C400D63F4D /* CCApi.m */; };
 		E5674C52228EB62800D63F4D /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C48228EB62800D63F4D /* UIView+frame.m */; };
 		E5674C53228EB62800D63F4D /* UIViewController+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E5674C4D228EB62800D63F4D /* UIViewController+frame.m */; };
@@ -53,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		999080588C05F81139427EC1 /* Pods-CCategoryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCategoryDemo.debug.xcconfig"; path = "Target Support Files/Pods-CCategoryDemo/Pods-CCategoryDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B0FFB818AEA5DA5A8A5BD63E /* Pods-CCategoryDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCategoryDemo.release.xcconfig"; path = "Target Support Files/Pods-CCategoryDemo/Pods-CCategoryDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E5674B87228EA8A500D63F4D /* CCategoryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCategoryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5674B8A228EA8A500D63F4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5674B8B228EA8A500D63F4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,20 +105,6 @@
 		E5674C07228EB2A800D63F4D /* RealReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealReachability.m; sourceTree = "<group>"; };
 		E5674C09228EB2A800D63F4D /* CCProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCProgressHUD.h; sourceTree = "<group>"; };
 		E5674C0A228EB2A800D63F4D /* CCProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCProgressHUD.m; sourceTree = "<group>"; };
-		E5674C2F228EB3F500D63F4D /* CCSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSecurityPolicy.h; sourceTree = "<group>"; };
-		E5674C30228EB3F500D63F4D /* CCNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		E5674C31228EB3F500D63F4D /* CCURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCURLSessionManager.h; sourceTree = "<group>"; };
-		E5674C32228EB3F500D63F4D /* CCURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCURLRequestSerialization.h; sourceTree = "<group>"; };
-		E5674C33228EB3F500D63F4D /* CCURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCURLResponseSerialization.m; sourceTree = "<group>"; };
-		E5674C34228EB3F500D63F4D /* CCHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCHTTPSessionManager.m; sourceTree = "<group>"; };
-		E5674C35228EB3F500D63F4D /* CCURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCURLResponseSerialization.h; sourceTree = "<group>"; };
-		E5674C36228EB3F500D63F4D /* CCURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCURLSessionManager.m; sourceTree = "<group>"; };
-		E5674C37228EB3F500D63F4D /* CCURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCURLRequestSerialization.m; sourceTree = "<group>"; };
-		E5674C38228EB3F500D63F4D /* CCNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNetworking.h; sourceTree = "<group>"; };
-		E5674C39228EB3F500D63F4D /* CCNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		E5674C3A228EB3F500D63F4D /* CCSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSecurityPolicy.m; sourceTree = "<group>"; };
-		E5674C3B228EB3F500D63F4D /* CCCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCompatibilityMacros.h; sourceTree = "<group>"; };
-		E5674C3C228EB3F500D63F4D /* CCHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCHTTPSessionManager.h; sourceTree = "<group>"; };
 		E5674C44228EB5C400D63F4D /* CCApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCApi.h; sourceTree = "<group>"; };
 		E5674C45228EB5C400D63F4D /* CCApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCApi.m; sourceTree = "<group>"; };
 		E5674C48228EB62800D63F4D /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
@@ -143,6 +126,7 @@
 		E5D803EC22955AA0009604A3 /* CCFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCFoundation.h; sourceTree = "<group>"; };
 		E5D803ED22955AF4009604A3 /* CCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKit.h; sourceTree = "<group>"; };
 		E5D803EE22955B5D009604A3 /* CCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCategory.h; sourceTree = "<group>"; };
+		ED526DDDEC5BE3081348D370 /* Pods_CCategoryDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCategoryDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,17 +134,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31E81EDAA95EB01716CDAEFC /* Pods_CCategoryDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82CACA1D24E50891E57C2908 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				999080588C05F81139427EC1 /* Pods-CCategoryDemo.debug.xcconfig */,
+				B0FFB818AEA5DA5A8A5BD63E /* Pods-CCategoryDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E5674B7E228EA8A500D63F4D = {
 			isa = PBXGroup;
 			children = (
 				E5674B89228EA8A500D63F4D /* CCategoryDemo */,
 				E5674B88228EA8A500D63F4D /* Products */,
+				82CACA1D24E50891E57C2908 /* Pods */,
+				F0BC5F85D0AA73955F0A6659 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,7 +254,6 @@
 			children = (
 				E5C5878F2297DF73003B45A8 /* WebViewJavascriptBridge */,
 				E5674BEB228EB2A800D63F4D /* RealReachability */,
-				E5674C2E228EB3F500D63F4D /* AFNetworking */,
 				E5674C08228EB2A800D63F4D /* MBProgressHUD */,
 			);
 			path = Third;
@@ -328,27 +324,6 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		E5674C2E228EB3F500D63F4D /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				E5674C38228EB3F500D63F4D /* CCNetworking.h */,
-				E5674C2F228EB3F500D63F4D /* CCSecurityPolicy.h */,
-				E5674C3A228EB3F500D63F4D /* CCSecurityPolicy.m */,
-				E5674C30228EB3F500D63F4D /* CCNetworkReachabilityManager.h */,
-				E5674C39228EB3F500D63F4D /* CCNetworkReachabilityManager.m */,
-				E5674C31228EB3F500D63F4D /* CCURLSessionManager.h */,
-				E5674C36228EB3F500D63F4D /* CCURLSessionManager.m */,
-				E5674C32228EB3F500D63F4D /* CCURLRequestSerialization.h */,
-				E5674C37228EB3F500D63F4D /* CCURLRequestSerialization.m */,
-				E5674C35228EB3F500D63F4D /* CCURLResponseSerialization.h */,
-				E5674C33228EB3F500D63F4D /* CCURLResponseSerialization.m */,
-				E5674C3C228EB3F500D63F4D /* CCHTTPSessionManager.h */,
-				E5674C34228EB3F500D63F4D /* CCHTTPSessionManager.m */,
-				E5674C3B228EB3F500D63F4D /* CCCompatibilityMacros.h */,
-			);
-			path = AFNetworking;
-			sourceTree = "<group>";
-		};
 		E5674C43228EB5C400D63F4D /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +348,14 @@
 			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
+		F0BC5F85D0AA73955F0A6659 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED526DDDEC5BE3081348D370 /* Pods_CCategoryDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,9 +363,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5674B9D228EA8A500D63F4D /* Build configuration list for PBXNativeTarget "CCategoryDemo" */;
 			buildPhases = (
+				A21E71A6FA562D14E21D9350 /* [CP] Check Pods Manifest.lock */,
 				E5674B83228EA8A500D63F4D /* Sources */,
 				E5674B84228EA8A500D63F4D /* Frameworks */,
 				E5674B85228EA8A500D63F4D /* Resources */,
+				29FC778DEFEFF1FBA9E17B2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,6 +423,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29FC778DEFEFF1FBA9E17B2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCategoryDemo/Pods-CCategoryDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CCategoryDemo/Pods-CCategoryDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CCategoryDemo/Pods-CCategoryDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A21E71A6FA562D14E21D9350 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CCategoryDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5674B83228EA8A500D63F4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -459,7 +486,6 @@
 				E5674BDC228EA9D800D63F4D /* NSUserDefaults+value.m in Sources */,
 				E5674BE9228EB22B00D63F4D /* WKWebView+url.m in Sources */,
 				E5674C53228EB62800D63F4D /* UIViewController+frame.m in Sources */,
-				E5674C42228EB3F500D63F4D /* CCSecurityPolicy.m in Sources */,
 				E5674C12228EB2A800D63F4D /* ReachStateLoading.m in Sources */,
 				E5674C0D228EB2A800D63F4D /* LocalConnection.m in Sources */,
 				E5674BDE228EA9D800D63F4D /* NSObject+runtime.m in Sources */,
@@ -468,16 +494,11 @@
 				E5C5879A2297DF73003B45A8 /* WebViewJavascriptBridge.m in Sources */,
 				E5674C10228EB2A800D63F4D /* ReachStateUnReachable.m in Sources */,
 				E5C5879B2297DF73003B45A8 /* WebViewJavascriptBridge_JS.m in Sources */,
-				E5674C3F228EB3F500D63F4D /* CCURLSessionManager.m in Sources */,
 				E5674B9A228EA8A500D63F4D /* main.m in Sources */,
 				E5674C54228EB62800D63F4D /* UIScreen+frame.m in Sources */,
-				E5674C40228EB3F500D63F4D /* CCURLRequestSerialization.m in Sources */,
-				E5674C3D228EB3F500D63F4D /* CCURLResponseSerialization.m in Sources */,
 				E5674BDF228EA9D800D63F4D /* NSObject+show.m in Sources */,
-				E5674C41228EB3F500D63F4D /* CCNetworkReachabilityManager.m in Sources */,
 				E5674C55228EB62800D63F4D /* UIApplication+url.m in Sources */,
 				E5674C0E228EB2A800D63F4D /* ReachState.m in Sources */,
-				E5674C3E228EB3F500D63F4D /* CCHTTPSessionManager.m in Sources */,
 				E5674BE3228EA9D800D63F4D /* NSObject+blankString.m in Sources */,
 				E5674B8C228EA8A500D63F4D /* AppDelegate.m in Sources */,
 				E5674C17228EB2A800D63F4D /* CCProgressHUD.m in Sources */,
@@ -622,6 +643,7 @@
 		};
 		E5674B9E228EA8A500D63F4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999080588C05F81139427EC1 /* Pods-CCategoryDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -639,6 +661,7 @@
 		};
 		E5674B9F228EA8A500D63F4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0FFB818AEA5DA5A8A5BD63E /* Pods-CCategoryDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

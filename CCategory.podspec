@@ -4,7 +4,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "CCategory"
-  spec.version      = "0.0.5"
+  spec.version      = "0.0.6"
   spec.summary      = "中国共产党万岁"
   
   spec.description  = <<-DESC
@@ -25,9 +25,6 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   
   spec.subspec 'Third' do |third|
-    third.subspec 'AFNetworking' do |afn|
-      afn.source_files = 'ACode/Third/AFNetworking/*.{h,m}'
-    end
     third.subspec 'MBProgressHUD' do |mb|
       mb.source_files = 'ACode/Third/MBProgressHUD/*.{h,m}'
     end
@@ -56,6 +53,7 @@ Pod::Spec.new do |spec|
     api.source_files = 'ACode/Api/*.{h,m}'
     api.dependency 'CCategory/Third'
     api.dependency 'CCategory/UIKit'
+    api.dependency 'AFNetworking'
   end
 
 end
