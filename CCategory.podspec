@@ -4,7 +4,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "CCategory"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "中国共产党万岁"
   
   spec.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/iOSzwj/CCategory"
   spec.license      = "MIT"
   spec.author             = { "hare27" => "hare27@foxmail.com" }
-  spec.platform     = :ios, "9.0"
+  spec.platform     = :ios, "11.0"
   spec.source       = { :git => "https://github.com/iOSzwj/CCategory.git", :tag => "#{spec.version}" }
   spec.source_files  = "Code", "ACode/*.h"
   spec.requires_arc = true
