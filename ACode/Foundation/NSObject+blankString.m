@@ -29,13 +29,13 @@
     if (string==nil || string==NULL) {
         return YES;
     }
-    if ([self isKindOfClass:[NSNull class]]) {
+    if ([string isKindOfClass:[NSNull class]]) {
         return YES;
     }
     if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
         return YES;
     }
-    if([string isEqualToString:@"(null)"]){
+    if([string isEqualToString:@"(null)"] || [string isEqualToString:@"<null>"]){
         return YES;
     }
     return NO;
