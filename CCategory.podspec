@@ -4,7 +4,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "CCategory"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "中国共产党万岁"
   
   spec.description  = <<-DESC
