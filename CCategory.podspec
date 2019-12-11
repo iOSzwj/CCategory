@@ -4,7 +4,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "CCategory"
-  spec.version      = "0.1.2"
+  spec.version      = "0.2.1"
   spec.summary      = "中国共产党万岁"
   
   spec.description  = <<-DESC
@@ -34,6 +34,9 @@ Pod::Spec.new do |spec|
     third.subspec 'WebViewJavascriptBridge' do |wj|
         wj.source_files = 'ACode/Third/WebViewJavascriptBridge/**/*.{h,m}'
     end
+    third.subspec 'AFNetworking' do |afn|
+        afn.source_files = 'ACode/Third/AFNetworking/**/*.{h,m}'
+    end
   end
   
   spec.subspec 'Foundation' do |fou|
@@ -53,6 +56,5 @@ Pod::Spec.new do |spec|
     api.source_files = 'ACode/Api/*.{h,m}'
     api.dependency 'CCategory/Third'
     api.dependency 'CCategory/UIKit'
-    api.dependency 'AFNetworking'
   end
 end

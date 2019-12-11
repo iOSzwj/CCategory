@@ -5,7 +5,7 @@ target 'CCategoryDemo' do
 
   use_frameworks!
 
-pod 'AFNetworking'
+#pod 'AFNetworking'
 
 
 end
