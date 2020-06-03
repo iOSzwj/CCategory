@@ -23,7 +23,6 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'UIKit', 'Foundation'
   spec.static_framework = true
   spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
-  spec.dependency  'AFNetworking','~>4.0.1'
   
   spec.subspec 'Third' do |third|
     third.subspec 'MBProgressHUD' do |mb|
@@ -54,5 +53,6 @@ Pod::Spec.new do |spec|
     api.source_files = 'ACode/Api/*.{h,m}'
     api.dependency 'CCategory/Third'
     api.dependency 'CCategory/UIKit'
+    api.dependency 'AFNetworking','~>4.0.1'
   end
 end
