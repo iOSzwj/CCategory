@@ -112,35 +112,35 @@ NSString *const CCNetworkStateChangeKey = @"CCNetworkStateChangeKey";
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
-+(void)setHeaders:(NSDictionary *)dict{
-    [self.defaultApi setHeaders:dict];
+//+(void)setHeaders:(NSDictionary *)dict{
+//    [self.defaultApi setHeaders:dict];
+//}
+//-(void)setHeaders:(NSDictionary *)dict{
+//    if (dict == nil) {
+//        return;
+//    }
+//    if (dict.allKeys.count == 0) {
+//        return;
+//    }
+//    if (self.apiM.requestSerializer == nil) {
+//        return;
+//    }
+//    __weak typeof(self) _weakSelf = self;
+//    [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+//        [_weakSelf.apiM.requestSerializer setValue:[obj description] forHTTPHeaderField:key];
+//    }];
+//}
+
++(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
+    return [[self defaultApi] GET:path parameters:params headers:headers success:success failure:failure];
 }
--(void)setHeaders:(NSDictionary *)dict{
-    if (dict == nil) {
-        return;
-    }
-    if (dict.allKeys.count == 0) {
-        return;
-    }
-    if (self.apiM.requestSerializer == nil) {
-        return;
-    }
-    __weak typeof(self) _weakSelf = self;
-    [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        [_weakSelf.apiM.requestSerializer setValue:[obj description] forHTTPHeaderField:key];
-    }];
++(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
+    return [[self defaultApi] POST:path parameters:params headers:headers success:success failure:failure];
 }
 
-+(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
-    return [[self defaultApi] GET:path parameters:params success:success failure:failure];
-}
-+(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
-    return [[self defaultApi] POST:path parameters:params success:success failure:failure];
-}
-
--(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
+-(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
     
-    return [self.apiM GET:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    return [self.apiM GET:path parameters:params headers:headers progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
         }
@@ -149,10 +149,9 @@ NSString *const CCNetworkStateChangeKey = @"CCNetworkStateChangeKey";
             failure(error);
         }
     }];
-    
 }
--(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
-    return [self.apiM POST:path parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+-(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure{
+    return [self.apiM POST:path parameters:params headers:headers progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
         }

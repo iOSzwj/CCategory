@@ -4,7 +4,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "CCategory"
-  spec.version      = "0.2.1"
+  spec.version      = "0.3.0"
   spec.summary      = "中国共产党万岁"
   
   spec.description  = <<-DESC
@@ -23,6 +23,7 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'UIKit', 'Foundation'
   spec.static_framework = true
   spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+  spec.dependency  'AFNetworking','~>4.0.1'
   
   spec.subspec 'Third' do |third|
     third.subspec 'MBProgressHUD' do |mb|
@@ -33,9 +34,6 @@ Pod::Spec.new do |spec|
     end
     third.subspec 'WebViewJavascriptBridge' do |wj|
         wj.source_files = 'ACode/Third/WebViewJavascriptBridge/**/*.{h,m}'
-    end
-    third.subspec 'AFNetworking' do |afn|
-        afn.source_files = 'ACode/Third/AFNetworking/**/*.{h,m}'
     end
   end
   

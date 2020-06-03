@@ -67,7 +67,7 @@
         if (completion) {
             completion(false);
         }
-        return;
+        //return;
     }
     [self openURL:url options:@{} completionHandler:completion];
 }
