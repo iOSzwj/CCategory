@@ -4,7 +4,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "CCategory"
-  spec.version      = "0.3.0"
+  spec.version      = "0.3.1"
   spec.summary      = "中国共产党万岁"
   
   spec.description  = <<-DESC
@@ -53,6 +53,6 @@ Pod::Spec.new do |spec|
     api.source_files = 'ACode/Api/*.{h,m}'
     api.dependency 'CCategory/Third'
     api.dependency 'CCategory/UIKit'
-    api.dependency 'AFNetworking','~>4.0.1'
+      api.dependency 'AFNetworking','~>4.0.1'
   end
 end
