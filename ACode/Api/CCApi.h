@@ -66,11 +66,11 @@ typedef enum : NSUInteger {
 //+(void)setHeaders:(NSDictionary *)dict;
 //-(void)setHeaders:(NSDictionary *)dict;
 
-+(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
-+(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
++(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *__nullable)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
++(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *__nullable)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
 
--(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
--(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
+-(NSURLSessionDataTask *)GET:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *__nullable)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
+-(NSURLSessionDataTask *)POST:(NSString *)path parameters:(NSDictionary *)params headers:(NSDictionary *__nullable)headers success:(CCSuccessResultBlock)success failure:(CCFailueBlock)failure;
 
 
 
