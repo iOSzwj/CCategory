@@ -10,7 +10,7 @@
 #import "CCProgressHUD.h"
 
 #define kToastDuration 1
-
+#define LableFont(fontsize) [UIFont fontWithName:@"PingFangSC-Medium" size:fontsize]
 @implementation NSObject (show)
 
 //显示失败提示
@@ -19,6 +19,9 @@
     CCProgressHUD *progressHUD = [CCProgressHUD showHUDAddedTo:[self currentView] animated:YES];
     progressHUD.mode = CCProgressHUDModeText;
     progressHUD.label.text = msg.description;
+    progressHUD.label.numberOfLines = 5;
+    progressHUD.label.font = LableFont(15);
+    progressHUD.label.textAlignment = NSTextAlignmentCenter;
     [progressHUD hideAnimated:YES afterDelay:kToastDuration];
     
 }
@@ -33,6 +36,7 @@
     CCProgressHUD *progressHUD = [CCProgressHUD showHUDAddedTo:[self currentView] animated:YES];
     progressHUD.mode = CCProgressHUDModeText;
     progressHUD.label.text = msg.description;
+    progressHUD.label.font = LableFont(15);
     [progressHUD hideAnimated:YES afterDelay:kToastDuration];
 }
 //显示成功提示
@@ -46,6 +50,7 @@
     CCProgressHUD *progressHUD = [CCProgressHUD showHUDAddedTo:[self currentView] animated:YES];
     progressHUD.mode = CCProgressHUDModeIndeterminate;
     progressHUD.label.text = msg;
+    progressHUD.label.font = LableFont(15);
 }
 // 显示等待消息
 - (void)showWaitingMsg:(NSString *)msg{
